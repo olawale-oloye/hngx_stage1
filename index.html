@@ -23,40 +23,43 @@
     />
     <link rel="stylesheet" href="/assests/css/stylesheet.css" />
 
-    <title>Olawale's Portfolio</title>
+    <title>Olawale's Data Showcase</title>
   </head>
   <body>
     <nav>
-      <h3 data-testid="slackUserName">Olawale</h3>
-      <ul>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Experience</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-      <div class="toggler">
-        <i class="ri-menu-line"></i> <i class="ri-close-line"></i>
-      </div>
+      <label></label>
+      <span data-testid="slackUserName">Adoravel_Fish</span>
     </nav>
     <main>
       <section id="first-session">
-        <div class="main-img">
+        <div class="left-col">
+          <label> Slack Display Picture </label>
+
           <img
             src="/assests/images/Passport.JPG"
             alt="Olawale's Portrait"
             data-testid="slackDisplayImage"
           />
         </div>
-        <div class="info">
-          <p data-testid="currentDayOfTheWeek" class="current-day"></p>
-          <p data-testid="currentUTCTime" class="current-time">
-            Current UTC time
-          </p>
+        <div class="data-item">
+          <div class="data-item-label-1">
+            <label>Current Day: </label>
+            <span class="current-day" data-testid="currentDayOfTheWeek"></span>
+          </div>
+          <div class="data-item-label-2">
+            <label>Current UTC time: </label>
+            <span class="current-time" data-testid="currentUTCTime"></span>
+          </div>
         </div>
       </section>
       <footer id="footer-items">
-        <div class="track"><p data-testid="myTrack">Frontend</p></div>
+        <div class="track">
+          <label>Track: </label><span data-testid="myTrack">Frontend</span>
+        </div>
+
         <div class="git">
+          <label>GitURL:</label>
+
           <a
             href="https://github.com/olawale-oloye/hngx_stage1"
             data-testid="githubURL"
