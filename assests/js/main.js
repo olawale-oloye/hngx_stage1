@@ -9,10 +9,6 @@ const days = [
   "Saturday",
 ];
 
-const openNav = document.querySelector(".ri-menu-line");
-const closeNav = document.querySelector(".ri-close-line");
-const navList = document.querySelector("nav ul");
-
 // To display Day of the Week
 const currentDateValue = days[new Date().getDay()];
 document.querySelector(".current-day").textContent = currentDateValue;
