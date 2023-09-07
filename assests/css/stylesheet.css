@@ -168,7 +168,7 @@ footer p {
   nav ul {
     flex-direction: column;
     position: fixed;
-    top: 8%;
+    top: -150%;
     left: 17%;
     width: 50%;
     background: var(--light);
