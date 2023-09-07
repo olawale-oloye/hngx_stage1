@@ -1,7 +1,4 @@
 // Variable Declaration
-
-const currentDay = document.querySelector(".current-day");
-const currentTime = document.querySelector(".current-time");
 const days = [
   "Sunday",
   "Monday",
@@ -12,10 +9,17 @@ const days = [
   "Saturday",
 ];
 
-// const timeTest = new Date().toString().split(" ").slice(0, 1);
-const currentDateValue = days[new Date().getDay()];
-currentDay.textContent = `Today is ${currentDateValue}`;
+const openNav = document.querySelector(".ri-menu-line");
+const closeNav = document.querySelector(".ri-close-line");
+const navList = document.querySelector("nav ul");
 
+// To display Day of the Week
+const currentDateValue = days[new Date().getDay()];
+document.querySelector(
+  ".current-day"
+).textContent = `Today is ${currentDateValue}`;
+
+// To display the current UTC time
 const currentUTCTImeValue = new Date(
   new Date().getTime() - new Date().getTimezoneOffset() * 60000
 )
@@ -23,4 +27,29 @@ const currentUTCTImeValue = new Date(
   .toString()
   .slice(11, 19);
 
-currentTime.textContent = `Current UTC Time is ${currentUTCTImeValue}`;
+document.querySelector(
+  ".current-time"
+).textContent = `Current UTC Time is ${currentUTCTImeValue}`;
+
+// Toggler
+openNav.addEventListener("click", function () {
+  navList.style.top = "17%";
+  openNav.style.display = "none";
+  closeNav.style.display = "block";
+});
+
+function closeNavToggler() {
+  navList.style.top = "-70%";
+  openNav.style.display = "block";
+  closeNav.style.display = "none";
+}
+
+closeNav.addEventListener("click", function () {
+  closeNavToggler();
+});
+
+document.querySelectorAll("nav ul li a").forEach((navList) => {
+  navList.addEventListener("click", function () {
+    closeNavToggler();
+  });
+});
