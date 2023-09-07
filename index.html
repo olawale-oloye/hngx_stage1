@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/assests/css/stylesheet.css" />
+    <link
+      rel="icon"
+      href="/assests/images/favicon-32x32.png"
+      type="images/x-icon"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Olawale's Portfolio</title>
+  </head>
+  <body>
+    <nav>
+      <h3 data-testid="slackUserName">Olawale</h3>
+      <ul>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Experience</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+    <main>
+      <section id="first-session">
+        <div class="main-img">
+          <img
+            src="/assests/images/Passport.JPG"
+            alt="Olawale's Portrait"
+            data-testid="slackDisplayImage"
+          />
+        </div>
+        <div class="info">
+          <p data-testid="currentDayOfTheWeek" class="current-day"></p>
+          <p data-testid="currentUTCTime" class="current-time">
+            Current UTC time
+          </p>
+        </div>
+      </section>
+      <footer id="footer-items">
+        <div class="track"><p data-testid="myTrack">Frontend</p></div>
+        <div class="git">
+          <a
+            href="https://github.com/olawale-oloye/hngx_stage1"
+            data-testid="githubURL"
+            target="_blank"
+            >Git</a
+          >
+        </div>
+      </footer>
+    </main>
+    <script src="/assests/js/main.js"></script>
+  </body>
+</html>
