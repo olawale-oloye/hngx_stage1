@@ -1,11 +1,11 @@
 // Variable Declaration
 
 document.addEventListener("DOMContentLoaded", function () {
-  const slackUserName = document.querySelector('[data-testid="slackUserName"]');
+  /* const slackUserName = document.querySelector('[data-testid="slackUserName"]');
 
   const slackDisplayPicture = document.querySelector(
     '[data-testid="slackDisplayImage"]'
-  );
+  ); */
   const currentDayOfTheWeek = document.querySelector(
     '[data-testid="currentDayOfTheWeek"]'
   );
@@ -17,8 +17,8 @@ document.addEventListener("DOMContentLoaded", function () {
     '[data-testid="currentUTCTimeMs"]'
   );
 
-  const myTrack = document.querySelector('[data-testid="myTrack"]');
-  const myGitURL = document.querySelector('[data-testid="githubURL"]');
+  /* const myTrack = document.querySelector('[data-testid="myTrack"]');
+  const myGitURL = document.querySelector('[data-testid="githubURL"]'); */
 
   function updateDateTime() {
     const days = [
@@ -30,25 +30,24 @@ document.addEventListener("DOMContentLoaded", function () {
       "Friday",
       "Saturday",
     ];
-    const currentDateValue = days[new Date().getDay()];
-    document.querySelector(".current-day").textContent = currentDateValue;
+    const currentDateValue = days[new Date().getUTCDay()];
+    // document.querySelector(".current-day").textContent = currentDateValue;
+    // console.log(currentDateValue);
 
-    const currentUTCTImeValue = new Date(
-      new Date().getTime() - new Date().getTimezoneOffset() * 60000
-    )
+    const currentUTCTImeValue = new Date()
       .toISOString()
       .toString()
       .slice(11, 19);
 
     const currnetUTCTimeMsValue = new Date().getTime();
 
-    slackUserName.textContent = "Olawale Oloye";
-    slackDisplayPicture.alt = "Adoravel_Fish";
+    // slackUserName.textContent = "Olawale Oloye";
+    // slackDisplayPicture.alt = "Adoravel_Fish";
     currentDayOfTheWeek.textContent = currentDateValue;
     currentUTCTime.textContent = currentUTCTImeValue;
     currentUTCTimeMs.textContent = currnetUTCTimeMsValue;
-    myTrack.textContent = "Frontend";
-    myGitURL.href = "https://github.com/olawale-oloye/hngx_stage1";
+    // myTrack.textContent = "Frontend";
+    // myGitURL.href = "https://github.com/olawale-oloye/hngx_stage1";
   }
 
   updateDateTime();

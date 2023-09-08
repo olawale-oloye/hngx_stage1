@@ -65,7 +65,7 @@ footer a:hover {
   padding: 1rem 12rem;
 }
 
-.left-col {
+.left-col a {
   display: flex;
   justify-content: center;
   align-items: center;
