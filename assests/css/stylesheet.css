@@ -74,8 +74,6 @@ footer a:hover {
   border-radius: 1rem;
   background-color: var(--tertiary);
   padding-bottom: 0.5rem;
-  /* padding-right: 8rem; */
-  /* text-align: center; */
 }
 .left-col label {
   padding: 0.5rem 0;
@@ -105,8 +103,6 @@ footer {
   background-color: var(--tertiary);
   color: var(--dark);
   padding: 3rem 12rem 7rem 12rem;
-  /* padding-top: 3rem;
-  padding-bottom: 7rem; */
 }
 
 footer a {
